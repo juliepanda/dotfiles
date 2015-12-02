@@ -1,0 +1,55 @@
+" Enable folding
+set foldmethod=syntax
+set foldlevel=99
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Utilities
+Plugin 'wookiehangover/jshint.vim'
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+Plugin 'ervandew/supertab'
+Plugin 'mattn/emmet-vim'
+Plugin 'tpope/vim-commentary'
+Plugin 'elzr/vim-json'
+Plugin 'pangloss/vim-javascript'
+Plugin 'Raimondi/delimitMate'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'fatih/vim-go'
+Plugin 'klen/python-mode'
+
+" set custom mappings
+let mapleader = ","
+map <leader>d :NERDTreeToggle<CR>
+
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+
+
+call vundle#end()
+filetype plugin indent on
+
+" syntax files
+" golang
+au BufRead,BufNewFile *.go set filetype=go
+
+" python
+au BufNewFile,BufRead *.py set tabstop=4
+au BufNewFile,BufRead *.py set softtabstop=4
+au BufNewFile,BufRead *.py set shiftwidth=4
+au BufNewFile,BufRead *.py set textwidth=79
+au BufNewFile,BufRead *.py set expandtab
+au BufNewFile,BufRead *.py set autoindent
+au BufNewFile,BufRead *.py set fileformat=unix
+
+" js, html, css
+au BufNewFile,BufRead *.js, *.html, *.css set tabstop=2
+au BufNewFile,BufRead *.js, *.html, *.css set softtabstop=2
+au BufNewFile,BufRead *.js, *.html, *.css set shiftwidth=2
