@@ -28,10 +28,10 @@ gtt () {
     then
         gt "$COMMIT_MESSAGE"
     else
-        echo "floating up one directory"
+        echo "... floating up one directory ..."
         cd ..
         gtt "$COMMIT_MESSAGE"
-        echo "floating down one directory"
+        echo "... floating down one directory ..."
         cd -
     fi
 }
