@@ -46,6 +46,6 @@ save_dotfiles () {
     cp ~/.aliases ~/workspace/dotfiles/
     cp ~/.bash_profile ~/workspace/dotfiles/
     cd ~/workspace/dotfiles
-    gt 'update my dotfiles'
+    gt "$1"
     cd -
 }
