@@ -9,5 +9,5 @@ Update my dotfiles on Github from anywhere: <br>
 
 
 Convenience aliases: <br>
-`py python_program.py` to run python programs
+`py python_program.py` to run python programs <br>
 `sb` to source .bash_profile
