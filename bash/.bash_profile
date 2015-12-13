@@ -35,8 +35,3 @@ gtt () {
         cd -
     fi
 }
-
-
-# alias
-alias py='python'
-alias la='ls -a'
