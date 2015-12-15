@@ -6,11 +6,6 @@ for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
 done
 unset file
 
-# test ground
-COOLBEAN="coolbean is cool"
-export COOLBEAN
-
-
 # convenience functions
 gt () {
     git add -A && git commit -m "$1" && git push;
@@ -38,6 +33,8 @@ save_dotfiles () {
     # vim
     cp ~/.vimrc ~/workspace/dotfiles/vim/
     cp ~/.vimrc.local ~/workspace/dotfiles/vim/
+    # scripts
+    cp -r ~/scripts ~/workspace/dotfiles/
     cd ~/workspace/dotfiles
     gt "$1"
     cd -

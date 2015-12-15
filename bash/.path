@@ -10,4 +10,22 @@ export PATH=$PATH:$GOPATH/bin
 # The orginal version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
 export PATH
+export PATH=$HOME/scripts:$PATH
+
+##
+# Your previous /Users/jpan2012/.bash_profile file was backed up as /Users/jpan2012/.bash_profile.macports-saved_2015-12-15_at_17:06:36
+##
+
+# MacPorts Installer addition on 2015-12-15_at_17:06:36: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+
+##
+# Your previous /Users/jpan2012/.bash_profile file was backed up as /Users/jpan2012/.bash_profile.macports-saved_2015-12-15_at_17:08:42
+##
+
+# MacPorts Installer addition on 2015-12-15_at_17:08:42: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
 

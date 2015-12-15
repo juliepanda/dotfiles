@@ -32,6 +32,9 @@ let g:pymode_rope = 0
 let mapleader = ","
 map <leader>d :NERDTreeToggle<CR>
 
+" TAKE THIS OUT WHEN DONE WITH COMP GRAPHIC PROJECT
+map <leader>r :!./start_client<CR>
+
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)

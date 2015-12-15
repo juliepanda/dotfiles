@@ -30,3 +30,7 @@ alias up='upup'
 
 # list only dotfiles
 alias ldot='la | grep "^\."'
+
+alias vv='vim ~/.vimrc.local'
+alias vb='vim ~/.bash_profile'
+alias va='vim ~/.aliases'
