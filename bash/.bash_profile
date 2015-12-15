@@ -31,9 +31,13 @@ gtt () {
 }
 
 save_dotfiles () {
+    # bash
     cp ~/.aliases ~/workspace/dotfiles/bash/
     cp ~/.bash_profile ~/workspace/dotfiles/bash/
     cp ~/.path ~/workspace/dotfiles/bash/
+    # vim
+    cp ~/.vimrc ~/workspace/dotfiles/vim/
+    cp ~/.vimrc.local ~/workspace/dotfiles/vim/
     cd ~/workspace/dotfiles
     gt "$1"
     cd -
