@@ -1,0 +1,13 @@
+# Add Homebrew `/usr/local/bin` and User `~/bin` to the `$PATH`
+export PATH=$HOME/.cabal/bin:$PATH
+export PATH=/usr/local/bin:$PATH
+export PATH=$HOME/bin:$PATH
+
+export GOPATH=$HOME/workspace/go
+export PATH=$PATH:$GOPATH/bin
+
+# Setting PATH for Python 3.4
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+export PATH
+
