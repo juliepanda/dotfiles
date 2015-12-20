@@ -37,6 +37,7 @@ save_dotfiles () {
     # vim
     cp ~/.vimrc ~/workspace/dotfiles/vim/
     cp ~/.vimrc.local ~/workspace/dotfiles/vim/
+    cp -r ~/.vim ~/workspace/dotfiles/vim/
     # scripts
     cp -r ~/scripts ~/workspace/dotfiles/
     cd ~/workspace/dotfiles
