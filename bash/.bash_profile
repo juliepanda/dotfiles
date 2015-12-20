@@ -13,15 +13,15 @@ gt () {
 
 gtt () {
     COMMIT_MESSAGE="$1"
-    if ls -a | grep git;
-    then
+    if ls -a | grep git; then
         gt "$COMMIT_MESSAGE"
     else
         echo "... floating up one directory ..."
+        local local_path="$PWD"
         cd ..
-        gtt "$COMMIT_MESSAGE"
+        gtt "$COMMIT_MESSAGE" "$PWD"
         echo "... floating down one directory ..."
-        cd -
+        cd "$local_path"
     fi
 }
 

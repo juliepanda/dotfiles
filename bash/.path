@@ -6,6 +6,10 @@ export PATH=$HOME/bin:$PATH
 export GOPATH=$HOME/workspace/go
 export PATH=$PATH:$GOPATH/bin
 
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
+
 # Setting PATH for Python 3.4
 # The orginal version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
