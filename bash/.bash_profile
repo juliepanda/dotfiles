@@ -8,7 +8,11 @@ unset file
 
 # convenience functions
 gt () {
-    git add -A && git commit -m "$1" && git push;
+    if [ -z "$1" ]; then
+        echo "At least write a commit message, you lazy."
+    else
+        git add -A && git commit -m "$1" && git push
+    fi
 }
 
 gtt () {
@@ -17,11 +21,11 @@ gtt () {
         gt "$COMMIT_MESSAGE"
     else
         echo "... floating up one directory ..."
-        local local_path="$PWD"
+        local LOCAL_PATH="$PWD"
         cd ..
         gtt "$COMMIT_MESSAGE" "$PWD"
         echo "... floating down one directory ..."
-        cd "$local_path"
+        cd "$LOCAL_PATH"
     fi
 }
 
