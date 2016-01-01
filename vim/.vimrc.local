@@ -1,3 +1,6 @@
+" system clipboard
+set clipboard=unnamed
+
 " Enable folding
 set foldmethod=syntax
 set foldlevel=99
@@ -30,7 +33,6 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
-Plugin 'ervandew/supertab'
 Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
@@ -40,6 +42,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'Raimondi/delimitMate'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'fatih/vim-go'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'Tfenby/python-mode', { 'branch' : 'develop' }
 
 " Pylint configuration file
@@ -52,7 +55,7 @@ let mapleader = ","
 map <leader>d :NERDTreeToggle<CR>
 
 " TAKE THIS OUT WHEN DONE WITH COMP GRAPHIC PROJECT
-map <leader>r :!./start_client<CR>
+map <leader>r :! reload_chrome.sh http://localhost:3000 <CR>
 
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
