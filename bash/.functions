@@ -27,6 +27,7 @@ save_dotfiles () {
     cp ~/.bash_profile ~/workspace/dotfiles/bash/
     cp ~/.path ~/workspace/dotfiles/bash/
     cp ~/.functions ~/workspace/dotfiles/bash/
+    cp ~/.bash_prompt ~/workspace/dotfiles/bash/
     # vim
     cp ~/.vimrc ~/workspace/dotfiles/vim/
     cp ~/.vimrc.local ~/workspace/dotfiles/vim/
