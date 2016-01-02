@@ -1,6 +1,9 @@
 " system clipboard
 set clipboard=unnamed
 
+" set shell
+let $BASH_ENV = "~/.bash_profile"
+
 " Enable folding
 set foldmethod=syntax
 set foldlevel=99
@@ -12,10 +15,12 @@ set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 set showmatch
 
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+let mapleader = ","
 " TRAINING WHEELS
 map <up> <nop>
 map <down> <nop>
@@ -50,8 +55,10 @@ let g:pymode_options_max_line_length = 120
 let g:pymode_rope_lookup_project = 0
 let g:pymode_rope = 0
 
+" Latex custom
+au FileType tex nmap <leader>r :! reload_skim % <CR>
+
 " set custom mappings
-let mapleader = ","
 map <leader>d :NERDTreeToggle<CR>
 
 " TAKE THIS OUT WHEN DONE WITH COMP GRAPHIC PROJECT
@@ -78,3 +85,6 @@ au BufNewFile,BufRead *.py set textwidth=79
 au BufNewFile,BufRead *.py set expandtab
 au BufNewFile,BufRead *.py set autoindent
 au BufNewFile,BufRead *.py set fileformat=unix
+
+" set updatetime for diff filetypes
+autocmd BufEnter * set updatetime=4000

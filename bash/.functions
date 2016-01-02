@@ -46,3 +46,24 @@ upup () {
         do cd ../
     done
 }
+
+reload_skim () {
+    local arg="$1"
+    local filename=$(echo $arg | cut -f 1 -d '.')
+    local extension="${arg##*.}"
+    if [[ "$extension" = "tex" ]] ; then
+        local numSkim=$(ps aux | grep "Skim" | wc -l | tr -d '[[:space:]]')
+        if [[ "$numSkim" = "2" ]] ; then
+            pdflatex "$arg"
+        elif [[ "$numSkim" = "1" ]] ; then
+            pdflatex "$arg"
+            local pdfStr=".pdf"
+            local pdfName=$filename$pdfStr
+            open -a Skim "$pdfName"
+        else
+            echo "Only run one instance of Skim."
+        fi
+    else
+        echo "reload_skim only runs in .tex"
+    fi
+}

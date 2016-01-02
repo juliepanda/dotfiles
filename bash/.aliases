@@ -26,6 +26,8 @@ alias ls="command ls ${colorflag}"
 # run python programs
 alias py='python'
 
+alias _='sudo'
+
 # source .bash_profile easily
 alias sb='source ~/.bash_profile'
 
@@ -38,3 +40,4 @@ alias ldot='la | grep "^\."'
 alias vv='vim ~/.vimrc.local'
 alias vb='vim ~/.bash_profile'
 alias va='vim ~/.aliases'
+alias vf='vim ~/.functions'
